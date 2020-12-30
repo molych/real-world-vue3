@@ -6,7 +6,7 @@
 
 <script>
 import EventCard from "@/components/EventCard.vue";
-import EventService from "@/services/EventService.js"
+import EventService from "@/services/EventService.js";
 
 export default {
   name: "Home",
@@ -21,13 +21,12 @@ export default {
   created() {
     EventService.getEvents()
       .then(responce => {
-        this.events = responce.data
+        this.events = responce.data;
       })
       .catch(error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
-
 };
 </script>
 
